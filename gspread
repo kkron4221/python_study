@@ -1,0 +1,20 @@
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+def save_spredsheet(buy_data):
+
+#　納品相手にしてもらうこと　(セキュリティ の観点より) 
+# jsonファイルの設定と、スプレッドシートの名前を記載
+
+
+    scope = ['https://spreadsheets.google.com/feeds',
+             'https://www.googleapis.com/auth/drive']
+
+    credentials = ServiceAccountCredentials.from_json_keyfile_name('gspread_test.json', scope)
+    gc = gspread.authorize(credentials)
+    wks = gc.open('test').sheet1
+    val = wks.acell('A1').value
+    print(val)
+    wks.update_acell('B1', buy_data)
+    
+save_spredsheet("abc")
