@@ -1,0 +1,18 @@
+#implicit_scraping
+
+from selenium.webdriver import Firefox, FirefoxOptions
+
+def implicit_scraping(url):
+    options = FirefoxOptions()
+    options.add_argument('-headless')
+
+    browser = Firefox(options=options)
+    browser.get(url)
+    
+    
+#explicit_scraping   
+from selenium import webdriver
+
+def explicit_scraping(url):
+    browser = webdriver.Firefox()
+    browser.get(url)
