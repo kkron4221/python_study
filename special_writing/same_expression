@@ -9,3 +9,9 @@ if True:
 one_list = ["a", "b", "c"]
 print(one_list[:])
 print(one_list)
+
+list_example = [2, 3, 4]
+x, y, z = list_example
+x = list_example[0]
+y = list_example[1]
+z = list_example[2]
