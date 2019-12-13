@@ -1,0 +1,6 @@
+list_num = ["11", "12", "13", "14"]
+list_str = ["a", "b", "c", "abc"]
+list_num.extend(list_str)
+
+#['11', '12', '13', '14', 'a', 'b', 'c', 'abc']
+print(list_num)
