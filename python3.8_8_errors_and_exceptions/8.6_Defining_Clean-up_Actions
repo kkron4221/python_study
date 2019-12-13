@@ -2,11 +2,14 @@ x = 10
 y = 1
 try:
     result = x / y
+#   if y == 0    
 except ZeroDivisionError:
     print("python")
+    
 #This else is corresponding 「except」
 #So only print except 「except」 or 「else」 print
 else:
+#   if y != 0    
     print("result is", result)
 finally:
     print("This is finally")
