@@ -1,0 +1,4 @@
+#tuple can contain various type.
+
+tuple = 1, "a", 1.1
+print(tuple)
