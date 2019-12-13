@@ -1,0 +1,11 @@
+#same
+
+if True:print("hello")
+
+if True:
+  print("hello")
+
+
+one_list = ["a", "b", "c"]
+print(one_list[:])
+print(one_list)
