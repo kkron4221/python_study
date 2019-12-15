@@ -1,0 +1,27 @@
+class MyClass():
+  def f(self):
+    print("hello world")
+    
+x = MyClass()
+xf = x.f
+print(xf)
+
+
+
+class MyClass():
+  def f(self):
+    return "hoge"
+    
+x = MyClass()
+xf = x.f
+#Not return "None"
+print(xf())
+
+class MyClass():
+  def f(self):
+    return "hoge"
+    
+x = MyClass()
+#It is OK to write in the method first
+xf = x.f()
+print(xf)
