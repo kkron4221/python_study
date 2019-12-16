@@ -1,0 +1,19 @@
+class Mapping:
+    def __init__(self, iterable):
+        self.items_list = []
+        self.__update(iterable)
+
+    def update(self, iterable):
+        for item in iterable:
+            self.items_list.append(item)
+
+    __update = update
+
+class MappingSubclass(Mapping):
+    def update(self):
+        print("Overwrite update")
+        return 0
+
+n = MappingSubclass("hogehoge")
+print(n.items_list)
+print(n.update())
