@@ -1,0 +1,36 @@
+target = [2, 4, 3, 7, 5, 8, 0, 9, 6, 1]
+print("First=")
+print(target)
+print("\n")
+
+# bubble sort
+def bubble_sort(target):
+  n = len(target)
+  for i in range(n):
+    for j in range(n - i - 1):
+      if target[j] > target[j + 1]:
+        target[j], target[j + 1] = target[j + 1], target[j]
+  return target
+
+def select_sort(target):
+  for ind, ele in enumerate(target):
+    min_ind = min(range(ind, len(target)))
+    target[ind], target[min_ind] = target[min_ind], ele
+  return target
+  
+# def insert_sort(target):
+
+# def merge_sort(target):
+  
+# def quick_sort(target):
+  
+# def count_sort(target):
+  
+  
+
+print(bubble_sort(target))
+print(select_sort(target))
+# print(insert_sort(target))
+# print(merge_sort(target))
+# print(quick_sort(target))
+# print(count_sort(target))
